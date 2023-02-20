@@ -1,1 +1,0 @@
-# ar-rock-paper-scissors
