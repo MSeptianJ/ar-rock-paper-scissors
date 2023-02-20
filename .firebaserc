@@ -1,5 +1,18 @@
 {
-  "projects": {
-    "default": "end-task-projects"
-  }
+	"projects": {
+		"default": "end-task-projects"
+	},
+	"targets": {
+		"end-task-projects": {
+			"hosting": {
+				"dev": [
+					"dev-ar-rps"
+				],
+				"prod": [
+					"ar-rps"
+				]
+			}
+		}
+	},
+	"etags": {}
 }
