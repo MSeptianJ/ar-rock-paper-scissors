@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
-import { getAuth } from 'firebase/auth';
 const {
 	initializeAppCheck,
 	ReCaptchaV3Provider,
@@ -14,13 +14,12 @@ const firebaseConfig = {
 	storageBucket: process.env.REACT_APP_FB_storageBucket,
 	messagingSenderId: process.env.REACT_APP_FB_messagingSenderId,
 	appId: process.env.REACT_APP_FB_appId,
-	measurementId: process.env.REACT_APP_FB_measurementId,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const appCheck = initializeAppCheck(app, {
-	provider: new ReCaptchaV3Provider(process.env.REACT_APP_FB_measurementId),
+	provider: new ReCaptchaV3Provider(process.env.REACT_APP_FB_siteKey),
 	isTokenAutoRefreshEnabled: true,
 });
 
