@@ -7,12 +7,12 @@ import {
 	RouterProvider,
 } from 'react-router-dom';
 import './assets/styles/index.css';
-import App from './routes/App';
+import Menu from './routes/menu';
 import ErrorPage from './routes/ErrorPage';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route path="/" element={<App />} errorElement={<ErrorPage />} />
+		<Route path="/" element={<Menu />} errorElement={<ErrorPage />} />
 	)
 );
 
