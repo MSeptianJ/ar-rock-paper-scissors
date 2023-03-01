@@ -1,30 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-	Route,
 	createBrowserRouter,
 	createRoutesFromElements,
+	Route,
 	RouterProvider,
 } from 'react-router-dom';
 import './assets/styles/index.css';
-import Menu from './routes/menu';
+import About from './routes/about';
+import Auth from './routes/auth';
 import ErrorPage from './routes/ErrorPage';
 import Game from './routes/game';
-import About from './routes/about';
+import Menu from './routes/menu';
+import Root from './routes/Root';
 import Tutorial from './routes/tutorial';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<>
-			<Route index path="/" element={<Menu />} errorElement={<ErrorPage />} />
-			<Route path="/game" element={<Game />} errorElement={<ErrorPage />} />
-			<Route path="/about" element={<About />} errorElement={<ErrorPage />} />
-			<Route
-				path="/tutorial"
-				element={<Tutorial />}
-				errorElement={<ErrorPage />}
-			/>
-		</>
+		<Route path="/" element={<Root />} errorElement={<ErrorPage />}>
+			<Route index element={<Menu />} />
+			<Route path="/auth" element={<Auth />} />
+			<Route path="/game" element={<Game />} />
+			<Route path="/about" element={<About />} />
+			<Route path="/tutorial" element={<Tutorial />} />
+		</Route>
 	)
 );
 

@@ -1,11 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-const index = () => {
+const Root = () => {
 	return (
 		<div className="h-screen w-screen bg-gray-400">
-			<div>Start</div>
+			<Outlet />
 		</div>
 	);
 };
 
-export default index;
+export default Root;
