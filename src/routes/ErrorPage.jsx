@@ -7,10 +7,10 @@ const ErrorPage = ({ error }) => {
 			<div className="m-auto w-full text-center">
 				<p className="text-xl text-white">Error : {error || '-_-'}</p>
 			</div>
-			<div className="border-accent bg-primary_bg m-auto my-10 w-3/4 max-w-md cursor-pointer rounded-md border-2 bg-gray-800 p-3 text-center transition-all hover:bg-opacity-70">
+			<div className=" border-accent bg-primary_bg m-auto my-10 w-3/4 max-w-md rounded-md border-2 bg-gray-800 text-center transition-all hover:bg-opacity-70">
 				<button
 					onClick={goBack}
-					className="text-lg font-bold uppercase text-white"
+					className=" mx-auto block w-full cursor-pointer p-4 text-lg font-bold uppercase text-white"
 				>
 					GO Back
 				</button>
