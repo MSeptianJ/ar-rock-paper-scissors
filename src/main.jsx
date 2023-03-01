@@ -9,10 +9,22 @@ import {
 import './assets/styles/index.css';
 import Menu from './routes/menu';
 import ErrorPage from './routes/ErrorPage';
+import Game from './routes/game';
+import About from './routes/about';
+import Tutorial from './routes/tutorial';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route index path="/" element={<Menu />} errorElement={<ErrorPage />} />
+		<>
+			<Route index path="/" element={<Menu />} errorElement={<ErrorPage />} />
+			<Route path="/game" element={<Game />} errorElement={<ErrorPage />} />
+			<Route path="/about" element={<About />} errorElement={<ErrorPage />} />
+			<Route
+				path="/tutorial"
+				element={<Tutorial />}
+				errorElement={<ErrorPage />}
+			/>
+		</>
 	)
 );
 
