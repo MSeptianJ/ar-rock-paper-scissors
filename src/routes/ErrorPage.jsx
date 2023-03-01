@@ -3,24 +3,19 @@ const ErrorPage = ({ error }) => {
 		history.back();
 	};
 	return (
-		<>
-			<div className=" absolute w-3/4 max-w-md p-3 top-24 left-1/2 transform -translate-x-1/2 bg-primary_bg border-2 rounded-md border-accent text-center transition-all">
-				<p className=" text-white text-xl">{error}</p>
-				<button onClick={goBack}>GO Back</button>
+		<div className="grid h-screen w-screen content-center bg-slate-700">
+			<div className="m-auto w-full text-center">
+				<p className="text-xl text-white">Error : {error || '-_-'}</p>
 			</div>
-			<div className=" w-screen h-screen m-auto transition-all">
-				<iframe
-					className="w-full h-full m-auto"
-					width="560"
-					height="315"
-					src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&start=43&showinfo=0&controls=0"
-					title="Youtube Surprise Video"
-					frameBorder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowFullScreen
-				></iframe>
+			<div className="border-accent bg-primary_bg m-auto my-10 w-3/4 max-w-md cursor-pointer rounded-md border-2 bg-gray-800 p-3 text-center transition-all hover:bg-opacity-70">
+				<button
+					onClick={goBack}
+					className="text-lg font-bold uppercase text-white"
+				>
+					GO Back
+				</button>
 			</div>
-		</>
+		</div>
 	);
 };
 

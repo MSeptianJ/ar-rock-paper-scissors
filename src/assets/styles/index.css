@@ -4,6 +4,6 @@
 
 @layer components {
 	.btn-menu {
-		@apply w-full bg-slate-300 my-4 p-3 rounded-md font-bold uppercase text-slate-600 hover:bg-opacity-80 cursor-pointer;
+		@apply w-full bg-slate-300 my-8 p-3 rounded-md font-bold uppercase text-slate-600 hover:bg-opacity-80 cursor-pointer;
 	}
 }
