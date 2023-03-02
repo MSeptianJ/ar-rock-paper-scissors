@@ -17,9 +17,9 @@ const Menu = () => {
 	];
 
 	return (
-		<div className="m-auto h-full w-full max-w-lg bg-slate-600 text-center">
-			<div className=" m-auto w-full p-4 text-center text-red-400">
-				<h1 className=" text-2xl font-bold uppercase">
+		<div className="m-auto flex h-full w-full max-w-lg flex-col justify-center bg-slate-600 text-center">
+			<div className=" w-full p-4 text-center text-red-400">
+				<h1 className=" text-4xl font-bold uppercase">
 					AR Rock Paper Scissors
 				</h1>
 			</div>

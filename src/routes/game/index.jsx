@@ -2,7 +2,7 @@ import React from 'react';
 
 const index = () => {
 	return (
-		<div className="h-screen w-screen bg-gray-400">
+		<div className="">
 			<div>Start</div>
 		</div>
 	);
